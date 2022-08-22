@@ -298,6 +298,7 @@
   width: 30px;
   height: 30px;
   transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  outline: none;
 }
 
 .gallery-navigation__btn::before {
@@ -308,10 +309,11 @@
   bottom: 0;
   left: 0;
   border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
 }
 
 .gallery-navigation__btn:focus::before {
-  border: 2px solid var(--color-black);
+  border-color: var(--color-black);
 }
 
 .gallery-navigation__btn:hover {
@@ -418,7 +420,11 @@
 .gallery-swiper .swiper-slide__img {
   display: block;
 }
-
+@media (max-width: 479.98px) {
+  .gallery-swiper .swiper-slide__img {
+    width: 100%;
+  }
+}
 .gallery-swiper .swiper-slide__pct {
   display: block;
 }

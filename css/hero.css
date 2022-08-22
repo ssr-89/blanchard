@@ -201,53 +201,53 @@
   }
 }
 .hero-swiper-wrapper__slide--1 {
-  background-image: url(../img/hero/1920-background-1.png);
+  background-image: url(../img/hero/1920-background-1.jpg);
 }
 
 .hero-swiper-wrapper__slide--2 {
-  background-image: url(../img/hero/1920-background-2.png);
+  background-image: url(../img/hero/1920-background-2.jpg);
 }
 
 .hero-swiper-wrapper__slide--3 {
-  background-image: url(../img/hero/1920-background-3.png);
+  background-image: url(../img/hero/1920-background-3.jpg);
 }
 
 @media (max-width: 1279.98px) {
   .hero-swiper-wrapper__slide--1 {
-    background-image: url(../img/hero/1024-background-1.png);
+    background-image: url(../img/hero/1024-background-1.jpg);
   }
 
   .hero-swiper-wrapper__slide--2 {
-    background-image: url(../img/hero/1024-background-2.png);
+    background-image: url(../img/hero/1024-background-2.jpg);
   }
 
   .hero-swiper-wrapper__slide--3 {
-    background-image: url(../img/hero/1024-background-3.png);
+    background-image: url(../img/hero/1024-background-3.jpg);
   }
 }
 @media (max-width: 991.98px) {
   .hero-swiper-wrapper__slide--1 {
-    background-image: url(../img/hero/768-background-1.png);
+    background-image: url(../img/hero/768-background-1.jpg);
   }
 
   .hero-swiper-wrapper__slide--2 {
-    background-image: url(../img/hero/768-background-2.png);
+    background-image: url(../img/hero/768-background-2.jpg);
   }
 
   .hero-swiper-wrapper__slide--3 {
-    background-image: url(../img/hero/768-background-3.png);
+    background-image: url(../img/hero/768-background-3.jpg);
   }
 }
 @media (max-width: 479.98px) {
   .hero-swiper-wrapper__slide--1 {
-    background-image: url(../img/hero/320-background-1.png);
+    background-image: url(../img/hero/320-background-1.jpg);
   }
 
   .hero-swiper-wrapper__slide--2 {
-    background-image: url(../img/hero/320-background-2.png);
+    background-image: url(../img/hero/320-background-2.jpg);
   }
 
   .hero-swiper-wrapper__slide--3 {
-    background-image: url(../img/hero/320-background-3.png);
+    background-image: url(../img/hero/320-background-3.jpg);
   }
 }

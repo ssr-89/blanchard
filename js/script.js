@@ -269,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        spaceBetween: 34,
         pagination: {
           el: '.events-swiper__pagination',
           clickable: true,
@@ -285,5 +286,113 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  // PROJECTS-swiper
+  const swiper = new Swiper('.projects-swiper-block', {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 50,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      992: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+    },
+  });
+
+
+  /*CONTACTS*/
+  (() => {
+    tippy(".js-tooltip-btn", {
+      theme: "ssr",
+      maxWidth: 290,
+      trigger: 'click',
+    });
+  })();
+
+  /*validation-form*/
+  var selector = document.querySelector("input[type='tel']");
+  var im = new Inputmask("+7 (999)-999-99-99");
+  im.mask(selector);
+  new JustValidate('.contacts-form', {
+    rules: {
+      name: {
+        required: true,
+        minLength: 2,
+        maxLength: 10
+      },
+      tel: {
+        required: true,
+        function: (name, value) => {
+          const phone = selector.inputmask.unmaskedvalue()
+          return Number(phone) && phone.length === 10
+        }
+      },
+    },
+    messages: {
+      name: {
+        required: 'Введите Ваше имя',
+        minLength: 'Минимальное значение 2 символа',
+        maxLength: 'Максимальное значение 20 символов'
+      },
+      tel: {
+        required: 'Введите Ваш телефон',
+        function: 'Минимальное значение 10 символов'
+      },
+    },
+  });
+
+
+  /*yandex-карта*/
+  ymaps.ready(init);
+  function init() {
+    const contactsMap = document.querySelector("#contacts-map");
+    const myMap = new ymaps.Map("contacts-map", {
+      center: [55.75846806898367, 37.60108849999989],
+      zoom: 12,
+      controls: ['geolocationControl', 'zoomControl']
+    },
+      {
+        suppressMapOpenBlock: true,
+        geolocationControlSize: "large",
+        geolocationControlPosition: { top: "200px", right: "20px" },
+        geolocationControlFloat: 'none',
+        zoomControlSize: "small",
+        zoomControlFloat: "none",
+        zoomControlPosition: { top: "120px", right: "20px" }
+      }
+    );
+
+    myMap.behaviors.disable('scrollZoom');
+
+    const myPlacemark = new ymaps.Placemark(
+      [55.75846806898367, 37.60108849999989],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "img/contacts/point.svg",
+        iconImageSize: [20, 20],
+        iconImageOffset: [-20, -40],
+      }
+    );
+    // Размещение геообъекта на карте.
+    myMap.geoObjects.add(myPlacemark);
+    myMap.container.fitToViewport();
+  };
 
 });

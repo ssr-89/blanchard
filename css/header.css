@@ -181,7 +181,7 @@
 }
 @media (max-width: 479.98px) {
   .header-top-menu {
-    padding: 46px 15px;
+    padding: 46px 15px 100px;
   }
 }
 .header-top-menu__list {
@@ -303,6 +303,7 @@
 }
 @media (max-width: 479.98px) {
   .enter {
+    margin: 0;
     padding: 11px 32px;
   }
 }
