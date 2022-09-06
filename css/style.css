@@ -59,6 +59,7 @@ body.block {
   padding: 0;
 }
 .reset-link {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
   outline: none;

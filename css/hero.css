@@ -1,204 +1,19 @@
 /*HERO*/
 .hero {
-  padding: 238px 0 122px;
-  min-height: 800px;
-}
-
-@media (max-width: 1279.98px) {
-  .hero {
-    padding: 210px 0 114px;
-    min-height: 768px;
-  }
-}
-@media (max-width: 767.98px) {
-  .hero {
-    padding: 160px 0 45px;
-    min-height: 576px;
-  }
-}
-@media (max-width: 575.98px) {
-  .hero {
-    min-height: 480px;
-  }
-}
-@media (max-width: 479.98px) {
-  .hero {
-    padding: 78px 0 45px;
-    min-height: 355px;
-  }
-}
-.hero__container {
-  color: #fff;
-}
-@media (max-width: 767.98px) {
-  .hero__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.hero__title {
-  margin: 0 0 17px;
-  max-width: 600px;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 87px;
-}
-@media (max-width: 1279.98px) {
-  .hero__title {
-    margin: 0 0 8px;
-  }
-}
-@media (max-width: 991.98px) {
-  .hero__title {
-    max-width: 585px;
-  }
-}
-@media (max-width: 767.98px) {
-  .hero__title {
-    margin: 0 0 32px;
-    max-width: 100%;
-    text-align: center;
-    font-size: 56px;
-    line-height: 64px;
-  }
-}
-@media (max-width: 575.98px) {
-  .hero__title {
-    margin: 0 0 16px;
-    font-size: 44px;
-    line-height: 44px;
-  }
-}
-@media (max-width: 479.98px) {
-  .hero__title {
-    margin: 0 0 15px;
-    font-size: 32px;
-    line-height: 37px;
-  }
-}
-.hero__descr {
-  margin: 0 0 114px;
-  max-width: 579px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
-}
-@media (max-width: 1279.98px) {
-  .hero__descr {
-    margin: 0 0 153px;
-    max-width: 661px;
-  }
-}
-@media (max-width: 767.98px) {
-  .hero__descr {
-    margin: 0 0 40px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 16px;
-  }
-}
-@media (max-width: 479.98px) {
-  .hero__descr {
-    max-width: 265px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-
-.hero__btn {
   position: relative;
-  padding: 22.5px 35px;
-  background-color: #9d5cd0;
-  border-radius: 100px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  outline: none;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-@media (max-width: 767.98px) {
-  .hero__btn {
-    padding: 18px 22px;
-    font-size: 16px;
-    line-height: 16px;
-  }
-}
-@media (max-width: 479.98px) {
-  .hero__btn {
-    padding: 13px 18px;
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-
-.hero__btn::before {
-  content: "";
-  position: absolute;
-  border-radius: 100px;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.hero__btn:focus:not(:hover) {
-  box-shadow: inset 0 0 0 3px #d1a9f0;
-}
-
-.hero__btn:hover:not(:active)::before {
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
-  /*border: 2px solid #C283F3;*/
-  box-shadow: inset 0 0 0 2px #c283f3;
-}
-
-.hero__btn:active {
-  background-color: #7943a4;
-  box-shadow: inset 0 0 0 3px #d1a9f0;
-}
-
-.hero__btn span {
-  position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .hero-swiper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
   width: 100%;
 }
 
 .hero-swiper-wrapper__slide {
+  padding: 238px 0 97px;
   min-height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-@media (max-width: 1279.98px) {
-  .hero-swiper-wrapper__slide {
-    min-height: 768px;
-  }
-}
-@media (max-width: 767.98px) {
-  .hero-swiper-wrapper__slide {
-    min-height: 576px;
-    background-position: top;
-  }
-}
-@media (max-width: 575.98px) {
-  .hero-swiper-wrapper__slide {
-    min-height: 480px;
-  }
-}
-@media (max-width: 479.98px) {
-  .hero-swiper-wrapper__slide {
-    min-height: 355px;
-  }
 }
 .hero-swiper-wrapper__slide--1 {
   background-image: url(../img/hero/1920-background-1.jpg);
@@ -212,42 +27,62 @@
   background-image: url(../img/hero/1920-background-3.jpg);
 }
 
-@media (max-width: 1279.98px) {
-  .hero-swiper-wrapper__slide--1 {
-    background-image: url(../img/hero/1024-background-1.jpg);
-  }
-
-  .hero-swiper-wrapper__slide--2 {
-    background-image: url(../img/hero/1024-background-2.jpg);
-  }
-
-  .hero-swiper-wrapper__slide--3 {
-    background-image: url(../img/hero/1024-background-3.jpg);
-  }
+.hero-swiper-wrapper__container {
+  color: var(--color-white);
 }
-@media (max-width: 991.98px) {
-  .hero-swiper-wrapper__slide--1 {
-    background-image: url(../img/hero/768-background-1.jpg);
-  }
-
-  .hero-swiper-wrapper__slide--2 {
-    background-image: url(../img/hero/768-background-2.jpg);
-  }
-
-  .hero-swiper-wrapper__slide--3 {
-    background-image: url(../img/hero/768-background-3.jpg);
-  }
+.hero-swiper-wrapper__title {
+  margin: 0 0 15px;
+  max-width: 600px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 87px;
 }
-@media (max-width: 479.98px) {
-  .hero-swiper-wrapper__slide--1 {
-    background-image: url(../img/hero/320-background-1.jpg);
-  }
+.hero-swiper-wrapper__descr {
+  margin: 0 0 90px;
+  max-width: 579px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
 
-  .hero-swiper-wrapper__slide--2 {
-    background-image: url(../img/hero/320-background-2.jpg);
-  }
+.hero-swiper-wrapper__btn {
+  position: relative;
+  padding: 22.5px 35px;
+  background-color: var(--color-9d5cd0);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-  .hero-swiper-wrapper__slide--3 {
-    background-image: url(../img/hero/320-background-3.jpg);
-  }
+.hero-swiper-wrapper__btn::before {
+  content: "";
+  position: absolute;
+  border-radius: 100px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero-swiper-wrapper__btn:focus:not(:hover) {
+  box-shadow: inset 0 0 0 3px var(--color-d1a9f0);
+}
+
+.hero-swiper-wrapper__btn:hover:not(:active)::before {
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  /*border: 2px solid #C283F3;*/
+  box-shadow: inset 0 0 0 2px var(--color-c283f3);
+}
+
+.hero-swiper-wrapper__btn:active {
+  background-color: #7943a4;
+  box-shadow: inset 0 0 0 3px var(--color-d1a9f0);
+}
+
+.hero-swiper-wrapper__btn span {
+  position: relative;
+  z-index: 1;
 }

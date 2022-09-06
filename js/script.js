@@ -1,23 +1,48 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
 
+  /*плавный скрол*/
+  const anchors = document.querySelectorAll('a[href*="#"]')
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      const blockID = anchor.getAttribute('href').substr(1)
+
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  };
 
   // HEADER-top-burger
   var burger = document.querySelector('.burger');
+  var burgerClose = document.querySelector('.header-top-menu__burger-close');
   var menu = document.querySelector('.header-top-menu');
   var menuLinks = menu.querySelectorAll('.header-top-menu__link');
   var body = document.querySelector('body');
 
   burger.addEventListener('click', function () {
-    burger.classList.toggle('burger__active');
+    burger.classList.add('burger__active');
+    burgerClose.classList.add('header-top-menu__burger-close__active');
     menu.classList.toggle('header-top-menu__active');
     searchTopForm.classList.remove('search-top__active');
     body.classList.toggle('block');
   });
 
+  burgerClose.addEventListener('click', function () {
+    burger.classList.remove('burger__active');
+    burgerClose.classList.remove('header-top-menu__burger-close__active');
+    menu.classList.remove('header-top-menu__active');
+    body.classList.remove('block');
+  });
+
   menuLinks.forEach(function (menuLink) {
     menuLink.addEventListener('click', function () {
       burger.classList.remove('burger__active');
+      burgerClose.classList.remove('header-top-menu__burger-close__active');
       menu.classList.remove('header-top-menu__active');
       body.classList.remove('block');
     });
@@ -217,10 +242,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     for (var i = 0; i < contCat.length; i++) {
       contCat[i].style.height = '0';
+      contCat[i].style.visibility = 'hidden';
     }
   }
   function showText(textEl) {
     textEl.style.height = textEl.scrollHeight + 'px';
+    textEl.style.visibility = 'visible';
   }
   // catalog-tabs
   document.querySelectorAll('.artist-list__link').forEach(function (tabsLink) {
@@ -303,6 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        spaceBetween: 34,
       },
       992: {
         slidesPerView: 2,
@@ -315,8 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-
-  /*CONTACTS*/
+  /*tooltip*/
   (() => {
     tippy(".js-tooltip-btn", {
       theme: "ssr",
@@ -325,6 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  /*CONTACTS*/
   /*validation-form*/
   var selector = document.querySelector("input[type='tel']");
   var im = new Inputmask("+7 (999)-999-99-99");
