@@ -237,14 +237,14 @@
 .artist-list__link::after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 1px;
   background-color: var(--color-9d5cd0);
   opacity: 0;
-  transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
 }
 .artist-list__link:hover:not(:active)::after {
   opacity: 1;

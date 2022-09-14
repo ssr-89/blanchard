@@ -182,6 +182,9 @@
     min-height: 200px;
     width: 100%;
   }
+  .events-swiper__slide-content {
+    padding: 52px 33px 60px 37px;
+  }
   .events-swiper__descr {
     position: absolute;
     top: 15px;
@@ -540,7 +543,7 @@
     margin: 0 0 15px;
   }
   .contacts-form__btn {
-    padding: 5px 32px;
+    padding: 10.5px 32px;
   }
   .contacts__map {
     min-height: 320px;
@@ -807,6 +810,9 @@
   .contacts-form__input {
     padding: 10px 56px 11px 24px;
     width: 100%;
+  }
+  .contacts-form__btn {
+    padding: 5px 32px;
   }
   .contacts-form__btn-text--one {
     display: none;
